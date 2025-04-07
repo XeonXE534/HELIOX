@@ -1,8 +1,8 @@
-KITSUNARI README
+Heliox README
 
-ALL VISUALS ARE NOT FINAL KITSUNARI 
+ALL VISUALS ARE NOT FINAL (Expect player)
 
-is a game I am making becuse I wanna do smth with my programming skill other than flex on my friends
+Heliox is a game 
 
 This readme is incomplete, I'll complete it later cuz I'm too bored to do it now
 
