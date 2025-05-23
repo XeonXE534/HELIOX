@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbeyllsjpemsr"]
+
+[ext_resource type="Texture2D" uid="uid://0vuuxqrle4jo" path="res://Assets/Interface/Health&Stamina/Red/BarBorder.png" id="1_7igne"]
+[ext_resource type="Texture2D" uid="uid://d2cew081ldvvy" path="res://Assets/Interface/Health&Stamina/Red/Colors.png" id="2_ams44"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37ods"]
+bg_color = Color(0, 0, 0, 0.866667)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+anti_aliasing = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ina8j"]
+atlas = ExtResource("1_7igne")
+region = Rect2(195, 21, 92, 9)
+margin = Rect2(4, 4.5, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijxrq"]
+atlas = ExtResource("1_7igne")
+region = Rect2(190, 40, 99, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo863"]
+atlas = ExtResource("2_ams44")
+region = Rect2(210, 76, 76, 10)
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 3
+anchor_right = 0.13
+anchor_bottom = 0.046
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_37ods")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(21, 21)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.654703, 0.0931998, 0.183056, 1)
+theme_override_font_sizes/normal_font_size = 15
+text = "HP
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+value = 29.0
+texture_under = SubResource("AtlasTexture_ina8j")
+texture_over = SubResource("AtlasTexture_ijxrq")
+texture_progress = SubResource("AtlasTexture_mo863")
+texture_progress_offset = Vector2(4, 4)

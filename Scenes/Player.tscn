@@ -217,7 +217,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i2e8t")
 }],
-"loop": true,
+"loop": false,
 "name": &"Atk-1",
 "speed": 10.0
 }, {
@@ -246,7 +246,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c43xd")
 }],
-"loop": true,
+"loop": false,
 "name": &"Atk-2",
 "speed": 10.0
 }, {
@@ -272,7 +272,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wpo1r")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 7.0
 }, {
@@ -283,7 +283,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_opqna")
 }],
-"loop": true,
+"loop": false,
 "name": &"Fall",
 "speed": 5.0
 }, {
@@ -300,7 +300,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vmcrb")
 }],
-"loop": true,
+"loop": false,
 "name": &"Hit",
 "speed": 5.0
 }, {
@@ -323,7 +323,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_glx4g")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle",
 "speed": 7.0
 }, {
@@ -334,7 +334,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8p516")
 }],
-"loop": true,
+"loop": false,
 "name": &"Jump",
 "speed": 5.0
 }, {
@@ -363,7 +363,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tbv6f")
 }],
-"loop": true,
+"loop": false,
 "name": &"Run",
 "speed": 10.0
 }]
@@ -376,7 +376,7 @@ script = ExtResource("1_872bd")
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8o4ym")
-animation = &"Idle"
+animation = &"Run"
 autoplay = "Idle"
 
 [node name="PlayerHitBox" type="CollisionShape2D" parent="."]

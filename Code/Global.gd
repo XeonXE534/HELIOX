@@ -8,13 +8,13 @@ func _ready() -> void:
         print("GLOBALS LOADED")
         
 #player vars and consts
-@export var P_SPEED = 300.0
-@export var P_JUMP_VELOCITY = -500.0
-@export var P_GRAVITY = 20
-@export var P_HP = 20
-@export var P_ATK_DMG = 10  
-@export var P_ATK_RANGE = 70
+@export var P_SPEED: float = 300.0
+@export var P_JUMP_VELOCITY: float = -500.0
+@export var P_GRAVITY: int = 20
+@export var P_HP: int = 20
+@export var P_ATK_DMG: int = 10  
+@export var P_ATK_RANGE: int = 70
 
 #slime vars and consts
-@export var S_SPEED = 100.0 
-@export var S_HP = 200
+@export var S_SPEED: float = 100.0
+@export var S_HP: float = 200

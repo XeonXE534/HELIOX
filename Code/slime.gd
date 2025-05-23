@@ -5,8 +5,8 @@ extends CharacterBody2D
 #Variables
 var player_position
 var target
-var direction = 1
-var is_dead = false
+var direction: int = 1
+var is_dead: bool = false
 
 @onready var player = get_parent().get_node('Player')
 @onready var animation = $Animation
@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	_InRangeToTakeDamage()
 	_PlayerTracking()
 
-func _Movement(delta: float) -> void:#Movement,collision and direction
+func _Movement(delta: float) -> void: #Movement,collision and direction
 	if not is_on_floor():
 		velocity += get_gravity() * delta  
 
@@ -39,11 +39,11 @@ func _Movement(delta: float) -> void:#Movement,collision and direction
 
 	move_and_slide()
 
-func _InRangeToTakeDamage() -> void:#Damage logic-1
+func _InRangeToTakeDamage() -> void: #Damage logic-1
 	if position.distance_to(player_position) <= G.P_ATK_RANGE and player.attacking:
 		_TakeDamage(10)
 
-func _TakeDamage(damage: int) -> void:#Damage logic-2
+func _TakeDamage(damage: int) -> void: #Damage logic-2
 	G.S_HP -= damage
 	print("---------------------------------")
 	print("Slime health:", G.S_HP)
@@ -55,7 +55,7 @@ func _TakeDamage(damage: int) -> void:#Damage logic-2
 		animation.play("Death") 
 		queue_free()
 
-func _PlayerTracking():#Player position tracking
+func _PlayerTracking(): #Player position tracking
 	player_position = player.position
 	target = (player_position - position).normalized()
 
